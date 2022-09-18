@@ -1,14 +1,12 @@
-def count_down(n):
+def greatest_common_divisor(a, b):
+    if (b == 0):
+        return a
+    else:
+        # Check out the modulus operator % https://www.w3schools.com/python/python_operators.asp
+        return greatest_common_divisor(b, a % b)
 
-  #  Base case
-  if n==0:
-      return
 
-  #  Recursive case
-  else:
-      print(n)
-      count_down(n-1)
+a = 15
+b = 10
 
-# test case
-n=8
-count_down(n)
+print(greatest_common_divisor(a, b))
